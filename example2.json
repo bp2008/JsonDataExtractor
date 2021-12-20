@@ -1,0 +1,24 @@
+[
+	{
+		"name": "Jon",
+		"species": "Human",
+		"age": 76
+	},
+	{
+		"name": "Garfield",
+		"species": "Cat",
+		"age": 43,
+		"rivals": [ "Odie", "Jon" ]
+	},
+	{
+		"name": "Odie",
+		"species": "Dog",
+		"age": 42
+	},
+	{
+		"name": "Nermal",
+		"species": "Cat",
+		"age": 41,
+		"rivals": [ "Garfield" ]
+	}
+]

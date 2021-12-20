@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonDataExtractor", "JsonDataExtractor\JsonDataExtractor.csproj", "{21310895-B393-4B22-827F-0CD3835D9D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPUtil", "..\..\..\..\Source\Repos\BPUtil\BPUtil\BPUtil.csproj", "{A4981D8D-DEBF-4B34-B9CE-FF25520A02B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE82C732-6DF4-44A5-9A6D-06BFEE456BEA}"
+	ProjectSection(SolutionItems) = preProject
+		example1.json = example1.json
+		example2.json = example2.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21310895-B393-4B22-827F-0CD3835D9D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21310895-B393-4B22-827F-0CD3835D9D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21310895-B393-4B22-827F-0CD3835D9D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21310895-B393-4B22-827F-0CD3835D9D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4981D8D-DEBF-4B34-B9CE-FF25520A02B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4981D8D-DEBF-4B34-B9CE-FF25520A02B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4981D8D-DEBF-4B34-B9CE-FF25520A02B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4981D8D-DEBF-4B34-B9CE-FF25520A02B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6F52AEB4-0598-41E6-8D00-F373FCBE876B}
+	EndGlobalSection
+EndGlobal

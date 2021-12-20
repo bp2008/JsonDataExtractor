@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{21310895-B393-4B22-827F-0CD3835D9D05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JsonDataExtractor</RootNamespace>
+    <AssemblyName>JsonDataExtractor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration.cs" />
+    <Compile Include="DataCollector.cs" />
+    <Compile Include="DataCollectorEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataCollectorEditor.Designer.cs">
+      <DependentUpon>DataCollectorEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGrabber.cs" />
+    <Compile Include="FileTemplate.cs" />
+    <Compile Include="FileTemplateEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTemplateEditor.Designer.cs">
+      <DependentUpon>FileTemplateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JsonDataExtractor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JsonDataExtractor.Designer.cs">
+      <DependentUpon>JsonDataExtractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainConfiguration.Designer.cs">
+      <DependentUpon>MainConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Source\Repos\BPUtil\BPUtil\BPUtil.csproj">
+      <Project>{A4981D8D-DEBF-4B34-B9CE-FF25520A02B7}</Project>
+      <Name>BPUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataCollectorEditor.resx">
+      <DependentUpon>DataCollectorEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTemplateEditor.resx">
+      <DependentUpon>FileTemplateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainConfiguration.resx">
+      <DependentUpon>MainConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TemplateSyntaxGuide.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

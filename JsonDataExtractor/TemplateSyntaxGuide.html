@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>JsonDataExtractor Template Syntax Guide</title>
+	<style type="text/css">
+		body
+		{
+			font-family: Arial, sans-serif;
+		}
+
+		pre
+		{
+			white-space: pre;
+			font-family: Consolas, monospace;
+			font-size: 10pt;
+			padding: 10px;
+			background-color: rgba(255,241,241,1);
+			border: 1px solid gray;
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>JsonDataExtractor Template Syntax Guide</h1>
+	<h2>Introduction</h2>
+	<p>A JsonDataExtractor file template consists of plain text and <b>JSON Path</b> expressions wrapped in {curly braces}.</p>
+	<p>
+		Read more about JSON Path expressions here:
+		<ul>
+			<li><a href="https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm" target="_blank">JSON.NET Documentation</a></li>
+			<li><a href="https://www.google.com/search?q=JSON+Path+tutorial" target="_blank">Google search for tutorials</a></li>
+		</ul>
+	</p>
+	<h2>Basic Example</h2>
+	<p>Given the following JSON:</p>
+	<pre>
+{
+	"name": "Garfield",
+	"species": "Cat",
+	"age": 43
+}</pre>
+	<p>Here is an example template:</p>
+	<pre>{$.name} the {$.species} is {$.age} years old.</pre>
+	<p>The output of this template would be:</p>
+	<pre>Garfield the cat is 43 years old.</pre>
+	<h2>Advanced Example</h2>
+	<p>This example JSON contains an array of objects.</p>
+	<pre>
+[
+	{
+		"name": "Jon",
+		"species": "Human",
+		"age": 76
+	},
+	{
+		"name": "Garfield",
+		"species": "Cat",
+		"age": 43,
+		"rivals": [ "Odie", "Jon" ]
+	},
+	{
+		"name": "Odie",
+		"species": "Dog",
+		"age": 42
+	},
+	{
+		"name": "Nermal",
+		"species": "Cat",
+		"age": 41,
+		"rivals": [ "Garfield" ]
+	}
+]</pre>
+	<h3>Accessing Array Items by Index</h3>
+	<p>Here is a template that uses multiple JSON Path expressions to print the names of each item.  Note that JSON arrays are indexed beginning with 0.  There is no item with an index of 4, the final expression fails to evaluate and returns a string "[?]" instead.</p>
+	<pre>Name of element 0: {$.[0].name}
+Name of element 1: {$.[1].name}
+Name of element 2: {$.[2].name}
+Name of element 3: {$.[3].name}</pre>
+	<p>Output:</p>
+	<pre>Name of element 0: Jon
+Name of element 1: Garfield
+Name of element 2: Odie
+Name of element 3: Nermal</pre>
+	<h3>Unmatched Expressions</h3>
+	<p>If a JSON Path expression fails to identify an object, a placeholder string of "[?]" or "[x]" will be returned:</p>
+	<pre>Name of element 4: {$.[4].name}</pre>
+	<p>Output:</p>Name of element 4: [?]</pre>
+	<h3>More Complexity A</h3>
+	<p>Here is a template that would print Garfield's first rival, no matter where Garfield is in the array:</p>
+	<pre>Garfield's First Rival: {$.[?(@.name == 'Garfield')].rivals[0]}</pre>
+	<p>Output:</p>
+	<pre>Garfield's First Rival: Odie</pre>
+	<h3>More Complexity B</h3>
+	<p>This template prints the name of each item that has rivals.</p>
+	<pre>Items with rivals: {$.[?(@.rivals)].name}</pre>
+	<p>Output:</p>
+	<pre>Items with rivals: Garfield, Nermal</pre>
+</body>
+</html>
