@@ -8,7 +8,7 @@ Extract to a location of your choice.
 
 Run `JsonDataExtractor.exe` and a service manager GUI will appear.
 
-![image](https://user-images.githubusercontent.com/5639911/146843137-e65c2d04-d793-4623-a71a-64e39c7514cc.png)
+![image](https://user-images.githubusercontent.com/5639911/146843918-b7cf0e5a-47d2-44aa-8b73-e354fc41b9a4.png)
 
 Use the `Configure` button to configure the application.  The GUI tries to be very self-explanatory.  An example configuration is created by default so that people who learn well by example can get started quickly.
 
