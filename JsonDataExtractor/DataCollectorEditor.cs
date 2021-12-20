@@ -15,16 +15,6 @@ namespace JsonDataExtractor
 	public partial class DataCollectorEditor : Form
 	{
 		/// <summary>
-		/// Gets the ID that is set in the form.
-		/// </summary>
-		public int id
-		{
-			get
-			{
-				return int.Parse(lblID.Text);
-			}
-		}
-		/// <summary>
 		/// Gets the URL that is set in the form.
 		/// </summary>
 		public string url
@@ -59,8 +49,6 @@ namespace JsonDataExtractor
 		public DataCollectorEditor(DataCollector dc)
 		{
 			InitializeComponent();
-
-			lblID.Text = dc.ID.ToString();
 			txtUrl.Text = dc.url;
 			txtUser.Text = dc.user;
 			txtPass.Text = dc.pass;

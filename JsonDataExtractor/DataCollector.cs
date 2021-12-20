@@ -4,7 +4,6 @@ namespace JsonDataExtractor
 {
 	public class DataCollector
 	{
-		public int ID = 0;
 		public string url;
 		public string user;
 		public string pass;
@@ -12,7 +11,7 @@ namespace JsonDataExtractor
 		public List<FileTemplate> fileTemplates = new List<FileTemplate>();
 		public override string ToString()
 		{
-			return "[" + ID + "] " + url;
+			return string.IsNullOrWhiteSpace(url) ? "[URL not defined]" : url;
 		}
 	}
 }

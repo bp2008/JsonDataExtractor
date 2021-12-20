@@ -30,8 +30,6 @@ namespace JsonDataExtractor
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.label1 = new System.Windows.Forms.Label();
-			this.lblID = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtUrl = new System.Windows.Forms.TextBox();
 			this.txtUser = new System.Windows.Forms.TextBox();
@@ -45,37 +43,17 @@ namespace JsonDataExtractor
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnAdd = new System.Windows.Forms.Button();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-			this.btnCancel = new System.Windows.Forms.Button();
 			this.label6 = new System.Windows.Forms.Label();
-			this.nudReloadSeconds = new System.Windows.Forms.NumericUpDown();
 			this.label7 = new System.Windows.Forms.Label();
+			this.btnCancel = new System.Windows.Forms.Button();
+			this.nudReloadSeconds = new System.Windows.Forms.NumericUpDown();
 			((System.ComponentModel.ISupportInitialize)(this.nudReloadSeconds)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(12, 9);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(21, 13);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "ID:";
-			this.toolTip1.SetToolTip(this.label1, "Unique identifier for this object.");
-			// 
-			// lblID
-			// 
-			this.lblID.AutoSize = true;
-			this.lblID.Location = new System.Drawing.Point(76, 9);
-			this.lblID.Name = "lblID";
-			this.lblID.Size = new System.Drawing.Size(16, 13);
-			this.lblID.TabIndex = 1;
-			this.lblID.Text = "...";
-			this.toolTip1.SetToolTip(this.lblID, "Unique identifier for this object.");
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(12, 32);
+			this.label2.Location = new System.Drawing.Point(12, 15);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(32, 13);
 			this.label2.TabIndex = 2;
@@ -86,7 +64,7 @@ namespace JsonDataExtractor
 			// 
 			this.txtUrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtUrl.Location = new System.Drawing.Point(79, 29);
+			this.txtUrl.Location = new System.Drawing.Point(79, 12);
 			this.txtUrl.Name = "txtUrl";
 			this.txtUrl.Size = new System.Drawing.Size(254, 20);
 			this.txtUrl.TabIndex = 3;
@@ -96,7 +74,7 @@ namespace JsonDataExtractor
 			// 
 			this.txtUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtUser.Location = new System.Drawing.Point(79, 55);
+			this.txtUser.Location = new System.Drawing.Point(79, 38);
 			this.txtUser.Name = "txtUser";
 			this.txtUser.Size = new System.Drawing.Size(254, 20);
 			this.txtUser.TabIndex = 5;
@@ -106,7 +84,7 @@ namespace JsonDataExtractor
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(12, 58);
+			this.label3.Location = new System.Drawing.Point(12, 41);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(61, 13);
 			this.label3.TabIndex = 4;
@@ -118,7 +96,7 @@ namespace JsonDataExtractor
 			// 
 			this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.txtPass.Location = new System.Drawing.Point(79, 81);
+			this.txtPass.Location = new System.Drawing.Point(79, 64);
 			this.txtPass.Name = "txtPass";
 			this.txtPass.PasswordChar = '*';
 			this.txtPass.Size = new System.Drawing.Size(254, 20);
@@ -129,7 +107,7 @@ namespace JsonDataExtractor
 			// label4
 			// 
 			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(12, 84);
+			this.label4.Location = new System.Drawing.Point(12, 67);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(56, 13);
 			this.label4.TabIndex = 6;
@@ -143,7 +121,7 @@ namespace JsonDataExtractor
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.lbFileTemplates.FormattingEnabled = true;
-			this.lbFileTemplates.Location = new System.Drawing.Point(12, 156);
+			this.lbFileTemplates.Location = new System.Drawing.Point(12, 139);
 			this.lbFileTemplates.Name = "lbFileTemplates";
 			this.lbFileTemplates.Size = new System.Drawing.Size(321, 134);
 			this.lbFileTemplates.TabIndex = 9;
@@ -152,7 +130,7 @@ namespace JsonDataExtractor
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(12, 137);
+			this.label5.Location = new System.Drawing.Point(12, 120);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(78, 13);
 			this.label5.TabIndex = 9;
@@ -162,7 +140,7 @@ namespace JsonDataExtractor
 			// 
 			this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-			this.btnOK.Location = new System.Drawing.Point(179, 325);
+			this.btnOK.Location = new System.Drawing.Point(179, 317);
 			this.btnOK.Name = "btnOK";
 			this.btnOK.Size = new System.Drawing.Size(66, 23);
 			this.btnOK.TabIndex = 13;
@@ -173,7 +151,7 @@ namespace JsonDataExtractor
 			// btnEdit
 			// 
 			this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnEdit.Location = new System.Drawing.Point(179, 296);
+			this.btnEdit.Location = new System.Drawing.Point(179, 288);
 			this.btnEdit.Name = "btnEdit";
 			this.btnEdit.Size = new System.Drawing.Size(154, 23);
 			this.btnEdit.TabIndex = 11;
@@ -184,7 +162,7 @@ namespace JsonDataExtractor
 			// btnDelete
 			// 
 			this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnDelete.Location = new System.Drawing.Point(12, 325);
+			this.btnDelete.Location = new System.Drawing.Point(12, 317);
 			this.btnDelete.Name = "btnDelete";
 			this.btnDelete.Size = new System.Drawing.Size(154, 23);
 			this.btnDelete.TabIndex = 12;
@@ -195,7 +173,7 @@ namespace JsonDataExtractor
 			// btnAdd
 			// 
 			this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnAdd.Location = new System.Drawing.Point(12, 296);
+			this.btnAdd.Location = new System.Drawing.Point(12, 288);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(154, 23);
 			this.btnAdd.TabIndex = 10;
@@ -203,22 +181,10 @@ namespace JsonDataExtractor
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
-			// btnCancel
-			// 
-			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.btnCancel.Location = new System.Drawing.Point(251, 325);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(82, 23);
-			this.btnCancel.TabIndex = 14;
-			this.btnCancel.Text = "Cancel";
-			this.btnCancel.UseVisualStyleBackColor = true;
-			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-			// 
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(12, 110);
+			this.label6.Location = new System.Drawing.Point(12, 93);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(73, 13);
 			this.label6.TabIndex = 15;
@@ -226,9 +192,32 @@ namespace JsonDataExtractor
 			this.toolTip1.SetToolTip(this.label6, "Password to use for HTTP basic authentication (leave empty if no credentials are " +
         "required)");
 			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(258, 93);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(47, 13);
+			this.label7.TabIndex = 17;
+			this.label7.Text = "seconds";
+			this.toolTip1.SetToolTip(this.label7, "Password to use for HTTP basic authentication (leave empty if no credentials are " +
+        "required)");
+			// 
+			// btnCancel
+			// 
+			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.btnCancel.Location = new System.Drawing.Point(251, 317);
+			this.btnCancel.Name = "btnCancel";
+			this.btnCancel.Size = new System.Drawing.Size(82, 23);
+			this.btnCancel.TabIndex = 14;
+			this.btnCancel.Text = "Cancel";
+			this.btnCancel.UseVisualStyleBackColor = true;
+			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+			// 
 			// nudReloadSeconds
 			// 
-			this.nudReloadSeconds.Location = new System.Drawing.Point(91, 107);
+			this.nudReloadSeconds.Location = new System.Drawing.Point(91, 90);
 			this.nudReloadSeconds.Maximum = new decimal(new int[] {
             86400,
             0,
@@ -247,17 +236,6 @@ namespace JsonDataExtractor
             0,
             0,
             0});
-			// 
-			// label7
-			// 
-			this.label7.AutoSize = true;
-			this.label7.Location = new System.Drawing.Point(258, 110);
-			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(47, 13);
-			this.label7.TabIndex = 17;
-			this.label7.Text = "seconds";
-			this.toolTip1.SetToolTip(this.label7, "Password to use for HTTP basic authentication (leave empty if no credentials are " +
-        "required)");
 			// 
 			// DataCollectorEditor
 			// 
@@ -282,8 +260,6 @@ namespace JsonDataExtractor
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.txtUrl);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.lblID);
-			this.Controls.Add(this.label1);
 			this.MinimumSize = new System.Drawing.Size(361, 391);
 			this.Name = "DataCollectorEditor";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -295,9 +271,6 @@ namespace JsonDataExtractor
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Label lblID;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtUrl;
 		private System.Windows.Forms.TextBox txtUser;

@@ -27,7 +27,7 @@ namespace JsonDataExtractor
 			{
 				jo = JObject.Parse(json);
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
 			}
 			JArray ja = null;
@@ -35,7 +35,7 @@ namespace JsonDataExtractor
 			{
 				ja = JArray.Parse(json);
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
 			}
 
@@ -70,7 +70,7 @@ namespace JsonDataExtractor
 										sb.Append(string.Join(", ", strs));
 									}
 								}
-								catch (Exception ex)
+								catch (Exception)
 								{
 									sb.Append("[x]");
 								}
@@ -88,7 +88,7 @@ namespace JsonDataExtractor
 										sb.Append(string.Join(", ", strs));
 									}
 								}
-								catch (Exception ex)
+								catch (Exception)
 								{
 									sb.Append("[x]");
 								}

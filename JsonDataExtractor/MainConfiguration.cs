@@ -32,8 +32,6 @@ namespace JsonDataExtractor
 		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			DataCollector dc = new DataCollector();
-			while (GetCollectorWithID(dc.ID) != null)
-				dc.ID++;
 			JsonDataExtractor.settings.collectors.Add(dc);
 			JsonDataExtractor.settings.Save();
 
@@ -41,14 +39,6 @@ namespace JsonDataExtractor
 			lbUrls.SelectedIndex = lbUrls.Items.Count - 1;
 
 			btnEdit_Click(sender, e);
-		}
-
-		private DataCollector GetCollectorWithID(int id)
-		{
-			foreach (DataCollector dc in JsonDataExtractor.settings.collectors)
-				if (dc.ID == id)
-					return dc;
-			return null;
 		}
 
 		private void btnEdit_Click(object sender, EventArgs e)
